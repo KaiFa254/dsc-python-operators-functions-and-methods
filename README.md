@@ -353,3 +353,64 @@ print(new_variable)
 In this lesson, we covered a lot of material, so don't worry if it seems overwhelming right now. First we looked at objects and then built-in methods and functions in Python. They help us greatly reduce the amount of code we write while also increasing the readability and efficiency of our code.
 
 Next we looked at operators in Python. Operators are fundamental tools in many languages that provide a succinct way to compare multiple elements. Comparison operators return boolean values and compare the value between two elements. Logical operators compare the truthiness and falsiness of two elements and either return one of the elements or a boolean value. Identity operators compare two elements for their equality, that is whether they are the same object or not, and return a boolean value. Lastly, ternary operators are used to assign a value to a variable. They use an `if` statement and another operator to compare two values and return one of two values, which is used to assign the value of a variable.
+
+# 📘 Python String Methods – Quick Reference
+
+---
+
+## 🔠 String Case Methods
+
+| Method | Use | Example | Output |
+|--------|-----|---------|--------|
+| `.lower()` | Convert to lowercase | `"Kaifa".lower()` | `'kaifa'` |
+| `.upper()` | Convert to uppercase | `"Kaifa".upper()` | `'KAIFA'` |
+| `.capitalize()` | Capitalize first letter | `"kaifa".capitalize()` | `'Kaifa'` |
+| `.title()` | Capitalize each word | `"kaifa njuguna".title()` | `'Kaifa Njuguna'` |
+| `.swapcase()` | Swap case | `"KaIfA".swapcase()` | `'kAiFa'` |
+
+---
+
+## 🧹 Cleaning & Trimming Methods
+
+| Method | Use | Example | Output |
+|--------|-----|---------|--------|
+| `.strip()` | Remove spaces both sides | `"  hello  ".strip()` | `'hello'` |
+| `.lstrip()` | Remove spaces left | `"  hello".lstrip()` | `'hello'` |
+| `.rstrip()` | Remove spaces right | `"hello  ".rstrip()` | `'hello'` |
+| `.replace(old, new)` | Replace text | `"bananas".replace("na", "--")` | `'ba--nas'` |
+
+---
+
+## 🔍 Finding & Checking Methods
+
+| Method | Use | Example | Output |
+|--------|-----|---------|--------|
+| `.startswith("text")` | Checks start | `"hello".startswith("he")` | `True` |
+| `.endswith("text")` | Checks end | `"hello".endswith("lo")` | `True` |
+| `.find("text")` | First index or `-1` | `"banana".find("na")` | `2` |
+| `.index("text")` | Like `.find()`, but errors if not found | `"banana".index("na")` | `2` |
+| `.count("a")` | Count occurrences | `"banana".count("a")` | `3` |
+| `.isalnum()` | Alphanumeric check | `"abc123".isalnum()` | `True` |
+| `.isalpha()` | Alphabet check | `"abc".isalpha()` | `True` |
+| `.isdigit()` | Digit check | `"123".isdigit()` | `True` |
+
+---
+
+## 🧩 Formatting & Splitting Methods
+
+| Method | Use | Example | Output |
+|--------|-----|---------|--------|
+| `.split()` | Split into list | `"a,b,c".split(",")` | `['a', 'b', 'c']` |
+| `.join(list)` | Join list to string | `",".join(['a','b','c'])` | `'a,b,c'` |
+| `.zfill(width)` | Pad left with 0s | `"7".zfill(3)` | `'007'` |
+| `.center(width)` | Center text | `"Kaifa".center(9)` | `'  Kaifa  '` |
+| `.ljust(width)` | Left align | `"Kaifa".ljust(10)` | `'Kaifa     '` |
+| `.rjust(width)` | Right align | `"Kaifa".rjust(10)` | `'     Kaifa'` |
+
+---
+
+## ✨ Bonus – f-Strings (Modern Formatting)
+```python
+name = "Erastus"
+age = 33
+print(f"My name is {name} and I’m {age} years old.")
